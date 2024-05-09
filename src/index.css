@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  overflow-x: hidden;
+}
+
+@layer components {
+  .colorCustomMain {
+    background-color: rgb(23, 24, 28);
+  }
+  .colorCustom1 {
+    background-color: hsla(230, 16%, 22%, 0.5);
+  }
+  .colorCustom2 {
+    background-color: hsl(225, 15%, 16%);
+  }
+  .hoverRow:hover button {
+    background-color: rgb(56, 116, 255);
+  }
+  .text-desc::after {
+    content: "";
+    width: 160px;
+    position: absolute;
+    background-image: url("../public/connect-line.png");
+    height: 12px;
+    top: -120px;
+    right: -95px;
+  }
+  .textColor2 {
+    color: rgb(217, 217, 217);
+  }
+  .textColorPrimary {
+    color: rgb(177, 181, 195);
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 14px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: hsl(220, 5%, 20%);
+  }
+  ::-webkit-scrollbar-track {
+    border: 2px solid hsl(220, 4%, 5%);
+    background-color: hsl(220, 4%, 5%);
+  }
+
+  .activeHeader {
+    position: fixed;
+    top: -66px;
+    background-color: hsl(0, 0%, 100%);
+    border-block-start: 1px solid var(--cultured);
+    animation: slideIn 0.25s cubic-bezier(0.33, 0.85, 0.4, 0.96) forwards;
+  }
+
+  @keyframes slideIn {
+    0% {
+      transform: translateY(0);
+      background-color: hsl(0, 0%, 100%);
+    }
+    100% {
+      transform: translateY(100%);
+      background-color: rgb(23 23 23);
+    }
+  }
+
+  [data-section] > * {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: all 500ms;
+  }
+  [data-section] > *.top-coin {
+    transform: translateY(-20%) !important;
+  }
+  @media only screen and (max-width: 660px) {
+    [data-section] > *.top-coin {
+      transform: translateY(-10%) !important;
+    }
+  }
+  [data-section].active > * {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
