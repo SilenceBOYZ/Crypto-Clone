@@ -1,4 +1,3 @@
-import FooterLink from "./FooterLink"
 
 function FooterList({ children, title }) {
   return (

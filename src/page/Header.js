@@ -30,11 +30,11 @@ function Header() {
         <nav className="flex gap-5 items-center tablet:py-5">
           <Logo image={"crypto.png"} />
           <ul className="flex h-full tablet:hidden">
-            <Link active={true}>Home page</Link>
-            <Link>Buy Crypto</Link>
-            <Link>Markets</Link>
-            <Link>Sell Crypto</Link>
-            <Link>Blog</Link>
+            <Link to={"#heroSection"} active={true}>Home page</Link>
+            <Link to={"#cryptoApp"}>Buy Crypto</Link>
+            <Link to={"#coinRank"}>Markets</Link>
+            <Link to={"#instruction"}>Sell Crypto</Link>
+            <Link to={"#about"} >Blog</Link>
           </ul>
         </nav>
         <div className="flex items-center gap-4">

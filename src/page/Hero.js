@@ -3,7 +3,7 @@ import Container from "../components/Container"
 
 function Hero() {
   return (
-    <section className="w-full transition-all duration-500 " style={{ backgroundColor: "hsl(228, 9%, 10%)" }}>
+    <section id="heroSection" className="w-full transition-all duration-500 " style={{ backgroundColor: "hsl(228, 9%, 10%)" }}>
       <Container lazyLoading={true} >
         <div className="flex xl:flex-row text-white py-[8rem] avg:py-[6rem] gap-8 sm:gap-12 transition-all duration-500 sm:flex-col mobile:flex-col mobile:gap-16 mobile:pt-6 mobile:pb-12">
           <div className="space-y-6 xl:w-[55%] sm:w-full mobile:w-ful">

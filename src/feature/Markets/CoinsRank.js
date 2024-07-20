@@ -4,7 +4,7 @@ import ListMenuItem from "../../components/ListMenuItem"
 
 function CoinsRank({ coins }) {
   return (
-    <div className="text-white space-y-8">
+    <div id="coinRank" className="text-white space-y-8">
       <div className="w-full flex justify-between items-center font-bold">
         <h2 className="text-5xl ">Market Update</h2>
         <a href="#ad" className="  pb-.5 border-b-[2px] border-b-transparent hover:border-b-blue-700 hover:text-blue-700 transition-all duration-500 active:hover:text-blue-800 active:border-b-blue-800">See All Coins</a>
@@ -22,7 +22,7 @@ function CoinsRank({ coins }) {
           <CoinTableHeader />
           <tbody>
             {!coins?.length ? <tr><td>Loading data</td></tr> :
-              coins.map(coin => <CoinInfor key={coin.uuid} coin={coin} />)
+              coins.map((coin, index) => <CoinInfor key={coin.uuid} coin={coin } index={index + 1}/>)
             }
           </tbody>
         </table>

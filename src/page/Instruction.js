@@ -3,7 +3,7 @@ import Step from "../components/Step"
 
 function Instruction() {
   return (
-    <section className="colorCustomMain text-white box-border py-14 ">
+    <section id="instruction" className="colorCustomMain text-white box-border py-14 ">
       <Container diplay="space-y-6 tablet:px-3" lazyLoading={true}>
         <h2 className="text-5xl text-center font-bold">How it work</h2>
         <h3 className="text-center text-lg textColorPrimary font-normal w-[40%] mobile:w-full mx-auto">Stacks is a production-ready library of stackable content blocks built in React Native.</h3>

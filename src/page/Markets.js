@@ -26,7 +26,6 @@ function Markets() {
     }
     fetchCoins();
   }, [])
-  console.log(coins);
   const topCoins = coins.slice(0, 4);
   return (
     <section className="w-full  transition-all duration-500 bg-neutral-900 py-6 pb-16 mobile:pb-6 mobile:pt-4">

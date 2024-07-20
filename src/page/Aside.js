@@ -5,7 +5,7 @@ import Title from "../ui/Title"
 
 function Aside() {
   return (
-    <aside className="colorCustomMain  pt-16 lg:pt-4 text-white " >
+    <aside id="cryptoApp" className="colorCustomMain  pt-16 lg:pt-4 text-white " >
       <Content imageSrc="app-banner.png" imagePosition="right" imageCustom="lg:translate-y-[20%] xl:translate-y-[0]">
         <Title
           title={"Free Your Money & Invest With Confident"}

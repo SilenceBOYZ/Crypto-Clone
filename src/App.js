@@ -1,4 +1,4 @@
-import { Suspense, lazy, useEffect, useRef } from "react";
+import {useEffect, useRef } from "react";
 import About from "./page/About";
 import Aside from "./page/Aside";
 import Footer from "./page/Footer";

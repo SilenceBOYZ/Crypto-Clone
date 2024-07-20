@@ -5,7 +5,7 @@ import Title from "../ui/Title";
 
 function About() {
   return (
-    <section className="bg-neutral-900 text-white box-border py-16 ">
+    <section id="about" className="bg-neutral-900 text-white box-border py-16 ">
       <Content imageSrc="about-banner.png" name="about crypto">
         <Title
           title={"What Is Cryptex"}
