@@ -1,5 +1,6 @@
 import Coin from "../../components/Coin"
 import ListMenuItem from "../../components/ListMenuItem"
+import Spinner from "../../ui/Spinner"
 
 function TopCoins({ coins }) {
   return (
@@ -20,8 +21,8 @@ function TopCoins({ coins }) {
           <ListMenuItem>Marketsplace</ListMenuItem>
         </ul>
 
-        <ul className="flex justify-between items-center pt-4 gap-3 tablet:grid tablet:grid-cols-2 mobile:grid-cols-1">
-          {!coins?.length ? <div>loading....</div> : coins.map((coin, index) => {
+        <ul className="flex justify-between items-center pt-4 gap-3 tablet:grid tablet:grid-cols-2 mobile:grid-cols-1 min-h-36">
+          {!coins.length ? <Spinner /> : coins.map((coin, index) => {
             if(index === 1) {
               return <Coin key={coin.uuid} coin={coin} active={true}/>
             }

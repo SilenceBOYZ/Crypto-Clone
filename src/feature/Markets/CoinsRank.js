@@ -1,8 +1,10 @@
 import CoinInfor from "../../components/CoinInfor"
 import CoinTableHeader from "../../components/CoinTableHeader"
 import ListMenuItem from "../../components/ListMenuItem"
+import Spinner from "../../ui/Spinner"
 
 function CoinsRank({ coins }) {
+
   return (
     <div id="coinRank" className="text-white space-y-8">
       <div className="w-full flex justify-between items-center font-bold">
@@ -18,10 +20,10 @@ function CoinsRank({ coins }) {
         <ListMenuItem>Gaming</ListMenuItem>
       </ul>
       <div className="tablet:overflow-x-scroll tablet:pb-12">
-        <table className="w-full tablet:w-[150%] ">
+        <table className="w-full tablet:w-[150%] min-h-32">
           <CoinTableHeader />
-          <tbody>
-            {!coins?.length ? <tr><td>Loading data</td></tr> :
+          <tbody className="relative">
+            {!coins?.length ? <Spinner /> :
               coins.map((coin, index) => <CoinInfor key={coin.uuid} coin={coin } index={index + 1}/>)
             }
           </tbody>
